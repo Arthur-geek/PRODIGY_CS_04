@@ -1,0 +1,60 @@
+********************************
+Simple Keylogger Documentation
+********************************
+
+Overview
+
+    This document provides an overview of the Simple Keylogger program, which logs keystrokes to a file. It is designed for educational purposes and emphasizes the importance of ethical use.
+
+Key Components
+    Dependencies
+    Log File
+    Key Press Handling
+    Key Release Handling
+    Main Function
+
+
+Dependencies
+    The program uses the pynput library to capture keyboard events. Ensure you have this library installed:
+
+    pip install pynput
+
+
+Log File
+    The keylogger records keystrokes in a file named keylog.txt.
+
+Functions
+    on_press(key)
+    Handles key press events and logs the keys to keylog.txt.
+
+Parameters:
+    key: The key that was pressed.
+    Functionality:
+    If the key is a standard character, it logs the character.
+    If the key is a special key (e.g., space, enter), it logs the key name.
+
+    on_release(key)
+    Handles key release events and stops the keylogger if the Esc key is pressed.
+
+    Parameters:
+
+    key: The key that was released.
+    Functionality:
+
+    If the Esc key is pressed, the function returns False, stopping the listener.
+
+Main Function
+    Sets up the keylogger listener and starts it.
+
+Functionality:
+    Initializes the listener to call on_press for key press events and on_release for key release events.
+    The listener runs indefinitely until stopped by pressing the Esc key.
+
+Usage
+    Run the Program: Execute the script to start logging keystrokes.
+    Stopping the Keylogger: Press the Esc key to stop the keylogger.
+    Viewing Logs: Open the keylog.txt file to view the recorded keystrokes.
+
+Ethical Considerations
+    Permissions: Always ensure you have explicit permission from the user or owner of the device before running a keylogger.
+    Legal Compliance: Be aware of the legal implications and ensure compliance with relevant laws and regulations.
